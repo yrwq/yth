@@ -1,0 +1,57 @@
+#!/bin/sh
+
+# zathura template for yth
+# AUTHOR: yrwq
+#
+
+. $HOME/.cache/current-color
+. $curr
+
+cat << EOF > "$HOME/.Xresources"
+set font "Iosevka Custom 14"
+
+set window-title-home-tilde true
+set statusbar-basename true
+set selection-clipboard clipboard
+
+set sandbox none
+set statusbar-h-padding 0
+set statusbar-v-padding 0
+set page-padding 1
+set statusbar-basename "true"
+
+map i recolor
+
+set default-bg "#${bg}"
+set default-fg "#${fg}"
+
+set statusbar-fg "#${bg}"
+set statusbar-bg "#${fg}"
+
+set inputbar-bg "#${bg}"
+set inputbar-fg "#${fg}"
+
+set notification-bg "#${bg}"
+set notification-fg "#${fg}"
+
+set notification-error-bg "#${bg}"
+set notification-error-fg "#${clr1}"
+
+set notification-warning-bg "#${bg}"
+set notification-warning-fg "#${clr1}"
+
+set highlight-color "#${clr3}"
+set highlight-active-color "#${clr4}"
+
+set completion-bg "#${bg}"
+set completion-fg "#${clr4}"
+
+set completion-highlight-fg "#${fg}"
+set completion-highlight-bg "#${clr4}"
+
+set recolor-lightcolor "#${bg}"
+set recolor-darkcolor "#${fg}"
+
+set recolor "true"
+set recolor-keephue "true"
+EOF

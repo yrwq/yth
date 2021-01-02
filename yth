@@ -1,0 +1,43 @@
+#!/usr/bin/env bash
+
+# Name: yth
+# Author: yrwq
+# Version: 0.2
+
+# Requires fzf, wmctrl, libnotify and feh
+
+theme_dir="$PWD/colors"
+template_dir="$PWD/templates"
+
+# Available templates
+config=("zathura" "xresources")
+
+# Arguments
+while [ "$1" ]; do
+    case "$1" in
+        -t|--theme) theme="$2"; shift 2 ;;
+        *) break ;;
+    esac
+done
+
+# Get a list of themes
+themes="$(ls -1 $theme_dir)"
+
+# Choose a theme
+[ "$theme" ] || theme="$(printf %b "$themes" | fzf)"
+
+# Handling theme
+[ -f "$theme_dir/$theme" ] &&
+    echo "curr=$theme_dir/$theme" > $HOME/.cache/current-color &
+    . $theme_dir/$theme ||
+    { echo "Invalid theme, exiting"; exit 1; }
+
+# Run templates defined in config
+for val in ${config[*]}; do
+    sh $template_dir/$val.template
+done
+
+# Change wallpapere if given
+if [ $wall ]; then
+    feh --bg-fill --no-fehbg $wall
+fi

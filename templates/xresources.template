@@ -1,0 +1,30 @@
+#!/bin/sh
+
+# xresources template for yth
+# AUTHOR: yrwq
+#
+
+. $HOME/.cache/current-color
+. $curr
+
+cat << EOF > "$HOME/.Xresources"
+*.background: #$bg
+*.foreground: #$fg
+*.cursorCoolor: #$cursor
+*.color0: #$clr0
+*.color1: #$clr1
+*.color2: #$clr2
+*.color3: #$clr3
+*.color4: #$clr4
+*.color5: #$clr5
+*.color6: #$clr6
+*.color7: #$clr7
+*.color8: #$clr8
+*.color9: #$clr9
+*.color10: #$clr10
+*.color11: #$clr11
+*.color12: #$clr12
+*.color13: #$clr13
+*.color14: #$clr14
+*.color15: #$clr15
+EOF
