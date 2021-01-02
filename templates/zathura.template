@@ -7,7 +7,7 @@
 . $HOME/.cache/current-color
 . $curr
 
-cat << EOF > "$HOME/.Xresources"
+cat << EOF > "$HOME/.config/zathura/zathurarc"
 set font "Iosevka Custom 14"
 
 set window-title-home-tilde true

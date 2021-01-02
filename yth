@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-# Name: yth
+# yth
 # Author: yrwq
 # Version: 0.2
 
@@ -9,8 +9,29 @@
 theme_dir="$PWD/colors"
 template_dir="$PWD/templates"
 
-# Available templates
+# Define which templates to use
+# Available templates:
+# zathura, xresources
 config=("zathura" "xresources")
+
+has(){
+    command -v "$1" &> /dev/null
+}
+
+err(){
+    printf "${c_red}%s${c_reset}" "$*" >&2
+}
+
+die(){
+    [[ -n "$1" ]] && err "$1"
+    exit 1
+}
+
+# Check dependencies
+has wmctrl || die "wmctrl not found"
+has feh || die "feh not found"
+has notify-send || die "notify-send not found"
+has fzf || die "fzf not found"
 
 # Arguments
 while [ "$1" ]; do
