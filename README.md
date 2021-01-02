@@ -8,17 +8,17 @@ Yth is a command-line theme changer written in bash. Yth changes an application'
 
 - [x] Xresources
 - [x] Zathura
-- [] Alacritty
-- [] Dunst
-- [] Discord
-- [] Firefox
-- [] Kitty
-- [] Termite
-- [] Emacs
-- [] Rofi
-- [] Bspwm
-- [] Xmonad
-- [] St
+- [ ] Alacritty
+- [ ] Dunst
+- [ ] Discord
+- [ ] Firefox
+- [ ] Kitty
+- [ ] Termite
+- [ ] Emacs
+- [ ] Rofi
+- [ ] Bspwm
+- [ ] Xmonad
+- [ ] St
 
 ### Contributing
 
