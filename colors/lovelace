@@ -18,3 +18,5 @@ clr13=B043D1
 clr14=3FDCEE
 clr15=BEBEC1
 wall=$HOME/.wp/pine.jpg
+font=xft:Iosevka Custom:size=14:antialias=true
+#font=xft:Iosevka Nerd Font:size=14:antialias=true
