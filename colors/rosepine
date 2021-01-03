@@ -18,5 +18,3 @@ clr13=c3a5e6
 clr14=eabbb9
 clr15=ffffff
 wall=$HOME/.wp/abstract.png
-font=xft:Iosevka Custom:size=14:antialias=true
-#font=xft:Iosevka Nerd Font:size=14:antialias=true
