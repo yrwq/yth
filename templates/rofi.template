@@ -1,0 +1,24 @@
+#!/bin/sh
+
+# rofi colors template for yth
+# AUTHOR: yrwq
+#
+
+. $HOME/.cache/current-color
+. $curr
+
+cat << EOF > "$HOME/.config/rofi/colors.rasi"
+* {
+    bg: #$bg;
+    fg: #$fg;
+    x0: #$clr0;
+    x1: #$clr1;
+    x2: #$clr2;
+    x3: #$clr3;
+    x4: #$clr4;
+    x5: #$clr5;
+    x6: #$clr6;
+    x7: #$clr7;
+    x8: #$clr8;
+}
+EOF
