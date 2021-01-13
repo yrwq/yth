@@ -7,6 +7,8 @@
 . $HOME/.cache/current-color
 . $curr
 
+mkdir -p $HOME/.config/zathura
+
 cat << EOF > "$HOME/.config/zathura/zathurarc"
 set font "Iosevka Custom 14"
 
