@@ -1,5 +1,5 @@
 {
-  "name": "yth",
+  "name": "@yrwq/yth",
   "version": "1.0.2",
   "main": "yth.sh",
   "repository": {
@@ -13,7 +13,8 @@
     "url": "https://github.com/yrwq/yth/issues"
   },
   "scripts": {
-      "install" : "./install.sh"
+    "install": "./install.sh"
   },
-  "homepage": "https://github.com/yrwq/yth"
+  "homepage": "https://github.com/yrwq/yth",
+  "description": "### Introduction"
 }

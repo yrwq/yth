@@ -3,33 +3,24 @@
 # safe and secure install script.
 
 download() {
-    url="https://raw.githubusercontent.com/yrwq/yth"
-
-    script="${url}/master/yth.sh"
-    colors="${url}/master/colors"
-    templates="${url}/master/templates"
+    url="https://github.com/yrwq/yth"
 
     mkdir -p ~/.local/share/yth
 
-    curl "$script" > ~/.bin/yth || {
-        printf '%s\n' "error: Couldn't download yth." >&2
-        exit 1
-    }
+    git clone $url && cd yth
 
-    curl "$colors" > ~/.local/share/yth/colors || {
-        printf '%s\n' "error: Couldn't download colors." >&2
-        exit 1
-    }
+    cp yth.sh ~/.bin/yth
 
-    curl "$templates" > ~/.local/share/yth/templates || {
-        printf '%s\n' "error: Couldn't download templates." >&2
-        exit 1
-    }
+    cp colors ~/.local/share/yth/colors -r
+
+    cp templates ~/.local/share/yth/templates -r
+
 }
 
 main() {
     download
     chmod +x ~/.bin/yth
+    cd .. &&  rm -rf yth
     printf '%s\n' "Installation complete. Run yth in your terminal."
 }
 
