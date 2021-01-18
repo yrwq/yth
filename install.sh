@@ -29,7 +29,7 @@ download() {
 
 main() {
     download
-
+    chmod +x ~/.bin/yth
     printf '%s\n' "Installation complete. Run yth in your terminal."
 }
 

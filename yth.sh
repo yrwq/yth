@@ -6,8 +6,8 @@
 
 # Requires fzf, wmctrl, libnotify and feh
 
-theme_dir="$HOME/.local/share/colors"
-template_dir="$HOME/.local/share/templates"
+theme_dir="$HOME/.local/share/yth/colors"
+template_dir="$HOME/.local/share/yth/templates"
 
 # Define which templates to use
 # Available templates:
