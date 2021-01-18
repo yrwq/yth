@@ -4,10 +4,25 @@
 
 download() {
     url="https://raw.githubusercontent.com/yrwq/yth"
-    url="${url}/master/yth.sh"
 
-    curl "$url" > ~/yth.sh || {
+    script="${url}/master/yth.sh"
+    colors="${url}/master/colors"
+    templates="${url}/master/templates"
+
+    mkdir -p ~/.local/share/yth
+
+    curl "$script" > ~/.bin/yth || {
         printf '%s\n' "error: Couldn't download yth." >&2
+        exit 1
+    }
+
+    curl "$colors" > ~/.local/share/yth/colors || {
+        printf '%s\n' "error: Couldn't download colors." >&2
+        exit 1
+    }
+
+    curl "$templates" > ~/.local/share/yth/templates || {
+        printf '%s\n' "error: Couldn't download templates." >&2
         exit 1
     }
 }
@@ -15,7 +30,7 @@ download() {
 main() {
     download
 
-    printf '%s\n' "Installation complete."
+    printf '%s\n' "Installation complete. Run yth in your terminal."
 }
 
 main "$@"

@@ -6,8 +6,8 @@
 
 # Requires fzf, wmctrl, libnotify and feh
 
-theme_dir="$PWD/colors"
-template_dir="$PWD/templates"
+theme_dir="$HOME/.local/share/colors"
+template_dir="$HOME/.local/share/templates"
 
 # Define which templates to use
 # Available templates:
