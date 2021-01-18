@@ -1,0 +1,19 @@
+{
+  "name": "yth",
+  "version": "1.0.2",
+  "main": "yth.sh",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/yrwq/yth.git"
+  },
+  "keywords": [],
+  "author": "yrwq",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/yrwq/yth/issues"
+  },
+  "scripts": {
+      "install" : "./install.sh"
+  },
+  "homepage": "https://github.com/yrwq/yth"
+}
