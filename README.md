@@ -33,3 +33,6 @@ npm install @yrwq/yth
 curl https://raw.githubusercontent.com/yrwq/yth/main/install.sh | sh
 ```
 
+### Usage
+
+Run `yth` in your terminal, to get a list of themes, and apply one of them with fzf.
